@@ -1,7 +1,7 @@
 export default {
-    name: 'geography',
+    name: 'geographyquestion',
     type: 'document',
-    title: 'Geogrpahy',
+    title: 'Geography Questions',
     fields: [
         {
             name: 'question',

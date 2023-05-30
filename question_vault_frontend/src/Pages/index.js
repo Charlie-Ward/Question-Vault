@@ -6,3 +6,4 @@ export { default as Footer } from './Footer/Footer';
 
 export { default as GeographyLandingPage} from './Geography/GeographyLandingPage';
 export { default as GeographyQuestions } from './Geography/GeographyQuestions';
+export { default as GeographyFlashcards } from './Geography/GeographyFlashcards';

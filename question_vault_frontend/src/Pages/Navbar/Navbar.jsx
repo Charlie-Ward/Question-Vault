@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className="navbar-right">
         <button className="navbar-link"><a href='/' className='HomeLink'>Home</a></button>
         <div className="navbar-dropdown">
-          <button className="navbar-dropdown-toggle">Subjects</button>
+          <button className="navbar-dropdown-toggle subjects">Subjects</button>
           <div className="navbar-dropdown-content">
             <a href="/geography">Geography</a>
           </div>

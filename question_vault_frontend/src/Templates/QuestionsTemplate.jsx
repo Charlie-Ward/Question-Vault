@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import sanityClient from '../../sanity';
 import '../Questions.css';
 
-const Template = () => {
+const Geogrpahy = () => {
   const [questions, setQuestions] = useState([]);
   const [showAnswers, setShowAnswers] = useState(false);
 
@@ -12,12 +12,12 @@ const Template = () => {
 
   const fetchQuestions = () => {
     sanityClient
-      .fetch(`*[_type == "question"]`)
+      .fetch(`*[_type == "geography"]`)
       .then((data) => {
         // Shuffle the questions array
         const shuffledQuestions = data.sort(() => 0.5 - Math.random());
         // Get the first five questions
-        const selectedQuestions = shuffledQuestions.slice(0, 5);
+        const selectedQuestions = shuffledQuestions.slice(0, 4);
         setQuestions(selectedQuestions);
       })
       .catch(console.error);
@@ -34,11 +34,8 @@ const Template = () => {
 
   return (
     <div className="App">
-      <div className="buttons">
-        <button onClick={handleShowAnswers}>Show Answers</button>
-        <button onClick={handleRefreshQuestions}>Refresh Questions</button>
-      </div>
-      <h1>Random Questions</h1>
+      <h4><a href='/geography' className='back'>&lt;- Back to geography</a></h4>
+      <h1>Geography Questions</h1>
       {questions.map((question) => (
         <div key={question._id}>
           <h3>{question.question}</h3>
@@ -50,8 +47,12 @@ const Template = () => {
           </ul>
         </div>
       ))}
+      <div className="buttons">
+        <button onClick={handleShowAnswers}>Show Answers</button>
+        <button onClick={handleRefreshQuestions}>Refresh Questions</button>
+      </div>
     </div>
   );
 };
 
-export default Template;
+export default Geogrpahy;

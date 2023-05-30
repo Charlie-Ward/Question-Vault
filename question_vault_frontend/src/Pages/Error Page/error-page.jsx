@@ -1,13 +1,21 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./error-page.css";
+import React from 'react';
+import './error-page.css';
 
-const ErrorPage = () => {
+const ErrorPage = ({ error }) => {
   return (
     <div className="error-page">
-      <h1>Error</h1>
-      <p>Sorry, there was an error loading this page.</p>
-      <Link to="/">Go back to Home</Link>
+      <h2 className="error-page-title">Error</h2>
+      <p className="error-page-text">
+        Oops! Something went wrong. Please try again later.
+      </p>
+      <p className='error-page-text'>
+        <a href='/'>Go back home</a>
+      </p>
+      {error && (
+        <p className="error-page-message">
+          Error Details: {error.message}
+        </p>
+      )}
     </div>
   );
 };

@@ -1,16 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-// import ReactDOM from 'react-dom/client';
-import {
-  createBrowserRouter, 
-  RouterProvider,
-} from "react-router-dom" ;
-//import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import './index.css';
-import { HomePage,ErrorPage,Navbar,Footer,GeographyLandingPage,GeographyQuestions } from './Pages';
+import { HomePage, ErrorPage, Navbar, Footer, GeographyLandingPage, GeographyQuestions, GeographyFlashcards } from './Pages';
 import reportWebVitals from './reportWebVitals';
 
 const router = (
@@ -20,6 +13,7 @@ const router = (
 
       <Route path='/geography' element={<GeographyLandingPage />} />
       <Route path="/geography/questions" element={<GeographyQuestions />} />
+      <Route path='/geography/flashcards' element={<GeographyFlashcards />} />
       
       <Route path="/*" element={<ErrorPage />} /> {/* Update the wildcard route */}
     </Routes>

@@ -25,13 +25,14 @@ nav {
 .navbar-text {
   font-weight: bold;
   font-size: 18px;
+  color: #02312d;
 }
 
 .navbar-link {
   margin-right: 10px;
   text-decoration: none;
-  color: #333;
-  background-color: transparent;
+  color: #fff;
+  background-color: #036359;
   border: none;
   padding: 1;
 }
@@ -39,6 +40,7 @@ nav {
 .navbar-dropdown {
   position: relative;
   display: inline-block;
+  color: #fff;
 }
 
 .navbar-dropdown-toggle {
@@ -46,30 +48,36 @@ nav {
   border: none;
   cursor: pointer;
   font-size: 16px;
-  color: #333;
+  color: #036359;
+  background-color: #036359;
 }
 
 .navbar-dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f8f8f8;
+  background-color: #036359;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  border-radius: 10px;
+  columns: #fff;
 }
 
 .navbar-dropdown-content a {
   display: block;
   padding: 10px;
   text-decoration: none;
-  color: #333;
+  color: #fff;
 }
-
 .navbar-dropdown:hover .navbar-dropdown-content {
   display: block;
 }
 
 .HomeLink {
   text-decoration: none;
-  color: #333;
+  color: #fff;
+}
+
+.subjects{
+  color: #fff;
 }
