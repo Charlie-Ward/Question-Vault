@@ -16,7 +16,6 @@ const Footer = () => {
   const handleFooterPosition = () => {
     if (footerRef.current) {
       const { clientHeight, scrollHeight } = document.documentElement;
-      const footerHeight = footerRef.current.clientHeight;
       const isContentLonger = scrollHeight > clientHeight;
       footerRef.current.style.position = isContentLonger ? 'static' : 'fixed';
       footerRef.current.style.bottom = isContentLonger ? 'auto' : '0';
