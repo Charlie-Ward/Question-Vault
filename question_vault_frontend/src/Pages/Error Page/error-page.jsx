@@ -1,7 +1,12 @@
-import React from 'react';
+import {React, useEffect} from 'react';
 import './error-page.css';
 
 const ErrorPage = ({ error }) => {
+
+  useEffect(() => {
+    document.title = "QV - Error";
+  }, []);
+
   return (
     <div className="error-page">
       <h2 className="error-page-title">Error</h2>

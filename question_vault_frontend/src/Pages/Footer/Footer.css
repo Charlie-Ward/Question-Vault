@@ -3,8 +3,14 @@
   padding: 20px;
   text-align: center;
   width: 100%;
-  position: relative;
+  position: fixed;
   bottom: 0;
+  left: 0;
+}
+
+.footer-container {
+  min-height: calc(100vh - 20px);
+  position: relative;
 }
 
 .footer-text {
@@ -36,4 +42,9 @@
 
 .link{
   color: #024a43;
+}
+
+.link a:hover {
+  scale: 1.25;
+  transition: all 0.5s ease-in-out;
 }

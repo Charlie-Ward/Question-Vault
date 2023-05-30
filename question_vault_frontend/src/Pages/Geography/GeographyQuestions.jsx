@@ -8,16 +8,17 @@ const Geogrpahy = () => {
 
   useEffect(() => {
     fetchQuestions();
+    document.title = "QV - Geography Questions";
   }, []);
 
   const fetchQuestions = () => {
     sanityClient
-      .fetch(`*[_type == "geography"]`)
+      .fetch(`*[_type == "question"]`)
       .then((data) => {
         // Shuffle the questions array
         const shuffledQuestions = data.sort(() => 0.5 - Math.random());
         // Get the first five questions
-        const selectedQuestions = shuffledQuestions.slice(0, 4);
+        const selectedQuestions = shuffledQuestions.slice(0, 7);
         setQuestions(selectedQuestions);
       })
       .catch(console.error);
@@ -33,9 +34,9 @@ const Geogrpahy = () => {
   };
 
   return (
-    <div className="App">
+    <div className="App main-content">
       <h4><a href='/geography' className='back'>&lt;- Back to geography</a></h4>
-      <h1>Geography Questions</h1>
+      <h1 className='heading'>Geography Questions</h1>
       {questions.map((question) => (
         <div key={question._id}>
           <h3>{question.question}</h3>

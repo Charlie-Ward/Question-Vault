@@ -8,6 +8,7 @@ const Geogrpahy = () => {
 
   useEffect(() => {
     fetchQuestions();
+    document.title = "QV - **Subject** Questions";
   }, []);
 
   const fetchQuestions = () => {
@@ -33,9 +34,9 @@ const Geogrpahy = () => {
   };
 
   return (
-    <div className="App">
+    <div className="App main-content">
       <h4><a href='/geography' className='back'>&lt;- Back to geography</a></h4>
-      <h1>Geography Questions</h1>
+      <h1 className='heading'>Geography Questions</h1>
       {questions.map((question) => (
         <div key={question._id}>
           <h3>{question.question}</h3>

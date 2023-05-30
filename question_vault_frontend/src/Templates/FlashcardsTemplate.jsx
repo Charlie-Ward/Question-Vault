@@ -9,6 +9,7 @@ const Flashcards = () => {
 
   useEffect(() => {
     fetchFlashcards();
+    document.title = "QV - **Subject** Flashcards";
   }, []);
 
   // Fetch flashcards from the database and shuffle the order

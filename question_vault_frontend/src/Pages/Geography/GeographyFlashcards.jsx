@@ -9,6 +9,7 @@ const Flashcards = () => {
 
   useEffect(() => {
     fetchFlashcards();
+    document.title = "QV - Geography Flashcards";
   }, []);
 
   // Fetch flashcards from the database and shuffle the order
@@ -40,7 +41,7 @@ const Flashcards = () => {
   return (
     <div className="flashcards-container">
       <h4><a href='/geography' className='back'>&lt;- Back to geography</a></h4>
-      <h1>Geography Flashcards</h1>
+      <h1 className='heading'>Geography Flashcards</h1>
       {flashcards.length > 0 && (
         <div className="flashcard">
           <h3 className="flashcard-question">

@@ -7,7 +7,9 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
+  z-index: 9999;
 }
 
 .navbar-left {
@@ -80,4 +82,9 @@ nav {
 
 .subjects{
   color: #fff;
+}
+
+.linkHome{
+  text-decoration: none;
+  color: #02312d;
 }

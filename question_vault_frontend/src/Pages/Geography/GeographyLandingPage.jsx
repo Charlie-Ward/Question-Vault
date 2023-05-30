@@ -1,7 +1,12 @@
-import React from "react";
+import {React, useEffect} from "react";
 import "../LandingPage.css";
 
 const GeographyPage = () => {
+
+  useEffect(() => {
+    document.title = "QV - Geography";
+  }, []);
+
   return (
     <div className="geography-page">
     <h1 className="geography-page-title">Geography - GCSE</h1>

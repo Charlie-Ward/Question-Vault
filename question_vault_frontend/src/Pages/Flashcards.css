@@ -23,12 +23,14 @@
   
   .flashcard-question {
     font-size: 18px;
-    color: #333;
+    color: #036359;
     margin-bottom: 10px;
   }
   
   .flashcard-answer {
     font-size: 16px;
-    color: #666;
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
   }
   
